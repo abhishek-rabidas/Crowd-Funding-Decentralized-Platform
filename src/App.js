@@ -38,7 +38,7 @@ function App() {
   return (<>
   <button style={{backgroundColor: "black", color: "white", margin: "3rem", padding: "1rem", display: connectButtonVisible}} onClick={web3Handler}>Connect Wallet</button>
   {
-    loading ? <p>Awaiting meta mask connection </p> : <Dashboard contract={contract} />
+    loading ? <p>Awaiting meta mask connection </p> : <Dashboard contract={contract} account={account} />
   }
   </>);
 }

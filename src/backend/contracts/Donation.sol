@@ -6,6 +6,14 @@ contract Donation {
     uint donor_id;
     uint beneficiary_id;
 
+    function getDonors() external view returns(uint) {
+        return donor_id;
+    }
+
+    function getBeneficiaries() external view returns(uint) {
+        return beneficiary_id;
+    }
+
     constructor() {
         donor_id = 0;
         beneficiary_id = 0;
