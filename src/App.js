@@ -1,11 +1,8 @@
-import logo from './logo.svg';
-import './App.css';
+import Dashboard from './frontend/views/Dashboard';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Ji</h1>
-    </div>
+    <Dashboard />
   );
 }
 
