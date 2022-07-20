@@ -13,12 +13,14 @@ export default function Dashboard({ contract, account }) {
         console.log("Registering donor: " + donorName);
         const tx = await (contract.register_donor(donorName));
         console.log(tx);
+        setDonorName("");
     }
 
     async function registerBeneficiary() {
         console.log("Registering Beneficiary: " + beneficiaryName);
         const tx = await (contract.register_beneficiary(beneficiaryName));
         console.log(tx);
+        setBeneficiaryName("");
     }
 
     async function refresh() {
@@ -50,14 +52,14 @@ export default function Dashboard({ contract, account }) {
         }} placeholder="Enter the beneficiary name" />
         <button onClick={registerBeneficiary}>Add Beneficiary</button>
         
-        <div style={{marginTop: "4rem"}}>
+        {/* <div style={{marginTop: "4rem"}}>
             <p>Total Donor: {donors}</p>
             <p>Total Beneficiary: {beneficiary}</p>
             <button onClick={refresh}>Refresh</button>
-        </div>
+        </div> */}
 
 
-        <div>
+        <div style={{marginTop: "2rem", border : "2px solid black", width : "max-content", padding : "10px"}}>
             <input type="number" placeholder="Enter beneficiary id: " onChange={(e)=>{
                 setDonorId(e.target.value);
             }}></input>
